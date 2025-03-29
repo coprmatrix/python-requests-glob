@@ -13,6 +13,7 @@
     <service name="py2pack_generate" mode="buildtime">
         <param name="name">requests-glob</param>
         <param name="localfile">requests_glob*.tar.gz</param>
+        <param name="source-url">https://files.pythonhosted.org/packages/source/r/requests_glob/requests_glob-%{version}.tar.gz</param>
     </service>
     <service name="perl_regex" mode="buildtime">
         <param name="file">*.spec</param>
