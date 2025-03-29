@@ -23,4 +23,9 @@
           s/%autosetup.*/%autosetup -p1 -n %{lua: print(rpm.expand('%{pypi_name}'):gsub('-','_')..rpm.expand('-%{version}')) }/g;
           s/(%{python_sitelib}\/requests_glob)\n/\1.py\n%pycache_only %{python_sitelib}\/__pycache__\/requests_glob.*.py*\n%license LICENSE\n%doc README.rst\n/g;</param>
     </service>
+
+    <service name="perl_regex" mode="buildtime">
+        <param name="file">*.spec</param>
+        <param name="regexfile">reg.pl</param> 
+    </service>
 </services>
